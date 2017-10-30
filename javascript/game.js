@@ -17,16 +17,17 @@ $(document).ready(function(){
 			// make character images into buttons that the user can click x
 
 
-			var yourCharacter 
+			var yourCharacter;
 			var currentEnemy
-			var characters = [{name:"obiWan", hp:150, imgSrc:"https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=75%2C42%2C1525%2C858&width=768"}]
 
-			renderAllCharacters($("#your-character"), characters); 
+			var allCharacters = [{name:"Obi Wan", hp:120, imgSrc:"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/18/16/enhanced/buzzfeed-prod-fastlane-01/enhanced-32245-1503089139-1.jpg?downsize=715:*&output-format=auto&output-quality=auto"},
+			{name:"Rey", hp:100, imgSrc:"http://lrmonline.com//inc/uploads/2017/06/img-1-9.jpg"},
+			{name:"Darth Maul", hp:150, imgSrc:"https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=75%2C42%2C1525%2C858&width=768"},
+			{name:"Darth Vader", hp:180, imgSrc:"https://1.bp.blogspot.com/-JnRMWN4T5mM/WNJ4tNjeFZI/AAAAAAABDZM/dNiRnTykLRwaTyhLWiROlrMmc46QOhcKQCLcB/s1600/Vader.jpeg"}]
+			
+			var remainingCharacters = allCharacters; 
 
-			// $("#"+yourCharacter.name).click(fucntion(event){
-
-			// });
-
+			renderAllCharacters($("#all-characters"), allCharacters); 
 
 			function renderAllCharacters(element, chars)
 			{
@@ -37,25 +38,43 @@ $(document).ready(function(){
 				element.html(allButtons); 
 			}
 
-
-			function renderOneCharacter(character){
-				var img= '<img class="characters" id="'+character.name+'" src="'+character.imgSrc+'">';
-				var characterName = '<p id="obi-tag">'+character.name+'</p>'; 
-				var characterHp = '<p id="obi-hp"><span id="kenobi-hp">'+character.hp+'hp</span></p>'
-				return '<button id="button"><div class="image">' + img + characterName + characterHp +'</div></button>';
+			function makeId(name){
+				return name.toLowerCase().replace(" ", "-"); 
 			}
 
+			function renderOneCharacter(character){
+				var id = makeId(character.name); 
+				var img = '<img class="allCharacters" src="'+character.imgSrc+'">';
+				var characterName = '<div>'+character.name+'</div>'; 
+				var characterHp = '<div>'+character.hp+'hp</div>'
+				return '<button id="'+id+'" class="characters"><div>' + characterName + img +  characterHp +'</div></button>';
+			}
 
 			function attack(){
 
 			}
+
+			for(var i = 0; i < allCharacters.length; i++){
+				var thisCharacter = allCharacters[i];
+				$("#" + makeId(thisCharacter.name)).click(function(event){
+					if(yourCharacter === undefined || yourCharacter === null){
+						yourCharacter = thisCharacter; 
+						remainingCharacters.splice(i, 1);
+						$("#all-characters").html("");
+						renderAllCharacters($("#your-character"), [yourCharacter]); 
+						renderAllCharacters($("#your-enemies"), remainingCharacters);
+					} 
+				})
+			}
+
+
+
 
 
 
 
 
 			// make character hp represent an actual value
-			$("#kenobi-hp").text("130 hp");
 			
 			// allow user to choose their character 
 
@@ -63,7 +82,7 @@ $(document).ready(function(){
 
 			// give users character a strength value
 			
-			// move the characters that are left to the enemies section
+			// move the allCharacters that are left to the enemies section
 
 			// give all enemies they're own strength value
 			

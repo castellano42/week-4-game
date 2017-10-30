@@ -1,11 +1,16 @@
-			.characters{
-				height:100px;
-				width:170px;
+			.characters > div {
+				height: 122px;
+    			width: 170px;
 				border:solid 3px gold;
 				float:left;
-				
-
 			}
+
+			.characters > div > img {
+				max-width: 136px;
+    			margin-top: 12px;
+			}
+
+
 
 
 
@@ -46,112 +51,7 @@
 						padding-left:30px;
 						
 					}
-					#obi-wan{
-						padding:20px;
-						background-color:white;
-						margin:/*5px*/;
-					}
 
-					#rey{
-						padding:20px;
-						background-color:white;
-						margin:/*5px*/;
-					}
-
-					#darth-maul{
-						padding:20px;
-						background-color:white;
-						margin:/*5px*/;
-					}
-
-					#darth-vader{
-						padding:20px;
-						background-color:white;
-						
-					}
-
-						p{
-							font-family:deathstar;
-							font-size:1.5em;
-						}
-
-
-						#obi-tag{
-							position: absolute; 
-						   top: -12px; 
-						   width: 225px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-
-						   }
-
-						#obi-hp{
-							position: absolute; 
-						   top: 108px; 
-						   width: 225px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						   
-						}
-
-						#rey-tag{
-							position: absolute; 
-						   top: -12px; 
-						   width: 216px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						   }
-
-
-						#rey-hp{
-							position: absolute; 
-						   top: 108px; 
-						   width: 216px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						}
-
-						#maul-tag{
-							position: absolute; 
-						   top: -12px; 
-						   width: 212px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						   }
-
-						#maul-hp{
-							position: absolute; 
-						   top: 108px; 
-						   width: 212px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-							}
-
-						#vader-tag{
-							position: absolute; 
-						   top: -12px; 
-						   width: 212px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						   }
-
-						#vader-hp{
-							position: absolute; 
-						   top: 108px; 
-						   width: 212px; 
-						   text-align:center;
-						   vertical-align: middle;
-						   line-height:
-						}
-
-		
 					#your-character{
 						height:130px;
 					}
