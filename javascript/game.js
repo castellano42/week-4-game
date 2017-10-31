@@ -1,17 +1,17 @@
 $(document).ready(function(){
-			// var obiWan;
-			// var rey;
-			// var darthMaul;
-			// var darthVader;
-			// var userChar;
-			// var enemies;
-			// var enemyChoice;
-			// var obiHp;
-			// var reyHp;
-			// var maulHp;
-			// var vaderHp;
-			// var userHp;
-			// var enemyHp;
+			var obiWan;
+			var rey;
+			var darthMaul;
+			var darthVader;
+			var userChar;
+			var enemies;
+			var enemyChoice;
+			var obiHp;
+			var reyHp;
+			var maulHp;
+			var vaderHp;
+			var userHp;
+			var enemyHp;
 
 			// steps:
 			// make character images into buttons that the user can click x
@@ -52,7 +52,7 @@ $(document).ready(function(){
 				return '<button id="'+id+'" class="characters"><div>' + characterName + img +  characterHp +'</div></button>';
 			}
 
-			function attack(){
+			function attackButton(){
 
 			}
 
