@@ -1,31 +1,33 @@
 $(document).ready(function(){
-			var obiWan;
-			var rey;
-			var darthMaul;
-			var darthVader;
-			var userChar;
-			var enemies;
-			var enemyChoice;
-			var obiHp;
-			var reyHp;
-			var maulHp;
-			var vaderHp;
-			var userHp;
-			var enemyHp;
+			// var obiWan;
+			// var rey;
+			// var darthMaul;
+			// var darthVader;
+			// var userChar;
+			// var enemies;
+			// var enemyChoice;
+			// var obiHp;
+			// var reyHp;
+			// var maulHp;
+			// var vaderHp;
+			// var userHp;
+			// var enemyHp;
 
 			// steps:
 			// make character images into buttons that the user can click x
 
 
 			var yourCharacter;
-			var currentEnemy
+			var currentEnemy;
 
 			var allCharacters = [{name:"Obi Wan", hp:120, imgSrc:"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/18/16/enhanced/buzzfeed-prod-fastlane-01/enhanced-32245-1503089139-1.jpg?downsize=715:*&output-format=auto&output-quality=auto"},
-			{name:"Rey", hp:100, imgSrc:"http://lrmonline.com//inc/uploads/2017/06/img-1-9.jpg"},
-			{name:"Darth Maul", hp:150, imgSrc:"https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=75%2C42%2C1525%2C858&width=768"},
-			{name:"Darth Vader", hp:180, imgSrc:"https://1.bp.blogspot.com/-JnRMWN4T5mM/WNJ4tNjeFZI/AAAAAAABDZM/dNiRnTykLRwaTyhLWiROlrMmc46QOhcKQCLcB/s1600/Vader.jpeg"}]
-			
+								{name:"Rey", hp:100, imgSrc:"http://lrmonline.com//inc/uploads/2017/06/img-1-9.jpg"},
+								{name:"Darth Maul", hp:150, imgSrc:"https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=75%2C42%2C1525%2C858&width=768"},
+								{name:"Darth Vader", hp:180, imgSrc:"https://1.bp.blogspot.com/-JnRMWN4T5mM/WNJ4tNjeFZI/AAAAAAABDZM/dNiRnTykLRwaTyhLWiROlrMmc46QOhcKQCLcB/s1600/Vader.jpeg"}]
+									
 			var remainingCharacters = allCharacters; 
+
+
 
 			renderAllCharacters($("#all-characters"), allCharacters); 
 
@@ -59,14 +61,13 @@ $(document).ready(function(){
 				$("#" + makeId(thisCharacter.name)).click(function(event){
 					if(yourCharacter === undefined || yourCharacter === null){
 						yourCharacter = thisCharacter; 
-						remainingCharacters.splice(i, 1);
-						$("#all-characters").html("");
+						remainingCharacters.splice[i, 1];
+						// $("#all-characters").html("");
 						renderAllCharacters($("#your-character"), [yourCharacter]); 
 						renderAllCharacters($("#your-enemies"), remainingCharacters);
 					} 
 				})
 			}
-
 
 
 
